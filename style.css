@@ -6,8 +6,8 @@
 }
 
 :root {
-  --green: hsl(147, 96%, 42%);
-  --primary: hsl(258, 73%, 62%);
+  --green: #04d261;
+  --primary: #8257e5;
   --primary-dark: hsl(259, 52%, 48%);
   --shape-dark: hsl(240, 5%, 25%);
   --background: hsl(240, 5%, 7%);
@@ -40,6 +40,14 @@ body {
   overflow: overlay;
 
   background-color: var(--background);
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--shape-dark);
 }
 
 .wrapper {
@@ -300,7 +308,7 @@ body.menu-expanded button {
   background-color: var(--primary-dark);
 }
 
-#home p {
+#home .content p {
   margin-bottom: 3.2rem;
 }
 
@@ -315,7 +323,7 @@ body.menu-expanded button {
   gap: 6rem;
 }
 
-#home .stat {
+#home .stat p {
   max-width: 28rem;
   margin-inline: auto;
 }
@@ -330,10 +338,6 @@ body.menu-expanded button {
 
 #home .stat h3 span {
   color: var(--green);
-}
-
-#home .stat p {
-  margin: 0;
 }
 
 /*=== SERVICES =================================*/
@@ -372,6 +376,7 @@ body.menu-expanded button {
 #depositions header p {
   margin-top: 2.4rem;
   margin-bottom: 6.7rem;
+  line-height: 150%;
 }
 
 #depositions .card {
@@ -382,13 +387,14 @@ body.menu-expanded button {
 
 #depositions .card p {
   margin-block: 2rem;
+  line-height: 150%;
 }
 
 #depositions .author {
   display: flex;
   gap: 1.6rem;
   align-items: center;
-  color: var(--primary-dark);
+  color: white;
 }
 
 #depositions img {
@@ -545,7 +551,7 @@ footer .social-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 67%;
   }
 
   nav#navigation .menu ul:nth-child(1) {
@@ -624,7 +630,6 @@ footer .social-links {
   /*=== HOME =================================*/
   #home {
     padding-top: var(--nav-height);
-    height: 100vh;
     padding-block: 16rem;
   }
 
@@ -669,21 +674,14 @@ footer .social-links {
 
   #home .stats .stat + .stat {
     border-left: 3px solid var(--primary);
-    margin-left: 3rem;
-    padding-left: 3rem;
   }
 
   #home .stats .stat {
     flex: 1;
-    margin: 0;
   }
 
   #home .button {
     margin: 0;
-  }
-
-  #home img {
-    width: 42rem;
   }
 
   /*=== SERVICES =================================*/
@@ -735,9 +733,9 @@ footer .social-links {
 
   /*=== CONTACT =================================*/
   #contact .wrapper {
-    grid-template-columns: 57rem 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 'B A';
-    gap: 3rem;
+    gap: 6rem;
   }
 
   #contact .col-b {
